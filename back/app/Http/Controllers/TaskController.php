@@ -19,7 +19,7 @@ class TaskController extends Controller
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string|max:500',
-            'assigned_to' => 'required|exists:users,id', // Asegúrate de tener el modelo User importado
+            'assigned_to' => 'required|exists:users,id',
         ]);
 
         // Crear la tarea
